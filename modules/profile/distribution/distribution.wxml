@@ -1,0 +1,19 @@
+<!--modules/Myhome/distribution/distribution.wxml-->
+
+<view class="page">
+<view class="link"></view>
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_small-appmsg">
+      <view class="weui-cells weui-cells_in-small-appmsg tion_footer">
+
+        <navigator wx:for="{{list}}" wx:key="{{index}}" url="/modules/profile/whatsystem/whatsystem?id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd weui-cell_primary">
+            <view class="title">{{item.title}}</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+
+      </view>
+    </view>
+  </view>
+</view>

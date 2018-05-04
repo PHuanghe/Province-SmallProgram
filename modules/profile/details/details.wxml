@@ -1,0 +1,97 @@
+<!--pages/Myhome/details/details.wxml-->
+
+
+<view class="page">
+
+  <view class="details_letter">
+    <view class="letter_collect">
+      <image class="collect_img" src="../../../asset/img/details_iocn01.png"></image>
+      <view class="collect_info">
+        <view class="name_phone">
+          <label>
+            <a> 收货人：</a>{{content.buy_name}}</label>
+          <text>{{content.buy_phone}}</text>
+        </view>
+        <view class="city">
+          <a>收货人：</a>{{content.address}}</view>
+      </view>
+
+    </view>
+    <view class="letter_express">
+      <image class="express_img" src='../../../asset/img/details_iocn02.png'></image>
+      <view class="express_speed">
+        <view class="speed">
+          <view style="color:#f74a38" wx:if="{{content.status==0}}"> 待付款</view>
+          <view style="color:#f27c27" wx:if="{{content.status==1}}"> 卖家已经发货</view>
+          <view style="color:#ffac40" wx:if="{{content.status==2}}"> 待收货</view>
+          <view style="color:#ffc300" wx:if="{{content.status==3}}"> 待安装</view>
+          <view style="color:#64be28" wx:if="{{content.status==4}}"> 待评价</view>
+          <!-- <view> 2017/17/10 10:00</view> -->
+        </view>
+        <view>
+          <a>快递公司：</a>
+          <span wx:if="{{content.logistics==null}}">暂无</span>
+          <span wx:else>{{content.logistics}}</span>
+        </view>
+        <view>
+          <a>快递单号：</a>
+          <span wx:if="{{content.logistics_num==null}}">暂无</span>
+          <span wx:else>{{content.logistics_num}}</span>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="details_commodity">
+    <view class="commodity_number">订单编号：{{content.orderNum}}</view>
+    <view class="commodity">
+      <image class="commodity_img" src='{{content.thumb}}'></image>
+      <view class="commodity_content">
+        <view class="title">{{content.title}}</view>
+        <view class="price">
+          <label>数量 x {{content.number}}</label>
+          <em>￥{{content.price}}</em>
+        </view>
+      </view>
+    </view>
+
+    <view class="total min_height">
+      <view>运费</view>
+      <view>到付</view>
+    </view>
+    <view class="total link">
+      <view>订单总计</view>
+      <view>￥{{content.price}}</view>
+    </view>
+    <view class="total">
+      <view>实付款</view>
+      <view style='color:#f27c27;'>￥{{content.price}}</view>
+    </view>
+  </view>
+  <!-- 物流 -->
+  <view class="details_logistics">
+
+    <view wx:for="{{logistics}}" wx:key="{{index}}" class="logistics_box {{index==0?'active':''}}">
+      <view class="logistics_icon">
+        <view class="icon_link"></view>
+        <view class="icon_spot" wx:if="{{index!=0}}"></view>
+        <view class="icon_red" wx:if="{{index==0}}"></view>
+      </view>
+      <view class="logistics_after {{index==0?'none':''}}">
+        <view class="after_title">{{item.AcceptStation}}</view>
+        <view class="after_date">{{item.AcceptTime}}</view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>
+<!-- <view class="btn" wx:if="{{content.status==0}}">
+  <button type='primary' class="botn cancel" data-oid='{{content.oid}}' bindtap='cancel'>取消订单</button>
+  <button type='primary' class="botn payment" data-oid="{{item.oid}}" bindtap='payment'>去付款</button>
+</view> -->
+
+<view class="details_btn" wx:if="{{content.status==2}}" data-oid='{{content.oid}}' bindtap='collect'>确认收货</view>
+<view class="details_btn" wx:if="{{content.status==3}}" data-oid='{{content.oid}}' bindtap='install'>确认安装</view>
+<navigator class="details_btn" wx:if="{{content.status==4}}"  url="/modules/comment/comment?id={{content.oid}}">去评价</navigator>

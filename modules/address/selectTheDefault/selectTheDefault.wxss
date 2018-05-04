@@ -1,0 +1,9 @@
+page{background-color:whitesmoke;}
+.address{padding: 7px 13px;border-bottom: 1px solid #eee;background-color: #fff;margin-bottom: 8px;}
+.address .personal{line-height: 27px;display: flex;font-size: 14px;font-weight: 600;}
+.address .personal .telephone{flex: 1;text-align: right;}
+.address .receipt{font-size: 12px;color: #333;line-height: 27px;}
+.address .default{display: flex;font-size: 12px;color: #999;}
+.address .default .default-left{flex:1;}
+.address .default .default-rugit text{margin-left: 10px;}
+.submit{line-height: 44px;background-color: #f27c27;color:#fff;font-size: 15px;position: fixed;bottom: 0;left: 0;width: 100%;text-align: center}

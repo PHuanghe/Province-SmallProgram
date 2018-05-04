@@ -1,0 +1,17 @@
+page{background-color:whitesmoke;}
+.details{display: flex;padding: 10px 13px;background-color: #fff;margin-top: 8px;}
+.details image{width: 50px;height: 53px;}
+.details .detailstext{flex: 1;padding-left: 10px}
+.details .detailstext_p{font-size: 14px;color:#333;font-weight: 600;line-height:18px;}
+.details .price{font-size:13px;display: flex;line-height:17px;}
+.details .price .pricesnpm{color:#999;flex:1;}
+.comment{background-color: #fff;padding: 13px;margin-top: 8px;}
+.comment .weui-textarea{border:1.2px solid #eee;padding: 10px;font-size: 14px;width:94%;}
+.submit{line-height: 44px;background-color: #f27c27;color:#fff;font-size: 15px;position: fixed;bottom: 0;left: 0;width: 100%;text-align: center;border-radius:0 !important;}
+.addto{margin-top:16px;display: flex; flex-wrap:wrap;}
+.addto .addtoimage{width: 31%;height: 82px;margin-bottom: 7px;position: relative;margin-left:12px;}
+.cur{margin-left: 0!important;}
+.addto .addtoimage .cancel{width: 20px;height: 20px;position: absolute;top: -5px;right: -4px;}
+.addto .addtoimage image{width: 100%;height: 100%;}
+.addto .addtobutton{width: 31%;height: 82px;border:1px dashed #eee;text-align: center;color: 14px;color: #999;font-size: 14px}
+.addto .addtobutton image{width: 43px;height: 35px;display: block;margin:auto;margin-top:10px;margin-bottom: 3px;}

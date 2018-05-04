@@ -1,0 +1,93 @@
+<!--pages/Myhome/subordinate/subordinate.wxml-->
+
+<view class="page">
+
+  <view class="subordinate">
+    <view class="subordinate_link"></view>
+    <view class=" subordinate_number">
+      <view class="number none">
+        <view style="color:#f34b4a">{{num}}</view>
+        <view>站点总数</view>
+      </view>
+      <view class="number " data-type='1' bindtap='spot'>
+        <view style="color:#ffc300">{{one_num}}</view>
+        <view>A站点</view>
+      </view>
+      <view class="number " data-type='2' bindtap='spot'>
+        <view style="color:#ffac40">{{two_num}}</view>
+        <view>B站点</view>
+      </view>
+      <!-- <view class="number " data-type='3' bindtap='spot'>
+        <view style="color:#f27c27">{{three_num}}</view>
+        <view>C站点</view>
+      </view> -->
+    </view>
+    <view class="subordinate_link"></view>
+    <view class="subordinate_list" wx:if="{{Type!=1}}">
+      <view class="Members_one" wx:for="{{data}}" wx:key="{{item}}">
+        <image class="image" src='{{item.face}}'></image>
+        <view class="letter">
+          <view class="name">{{item.nickname}}</view>
+          <view class="customer">
+            下级分销 {{item.childNum}} 客户 {{item.customerNum}}
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="subordinate_list" wx:if="{{Type==1}}">
+      <!-- <scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'> -->
+      <!-- <view wx:for="{{res}}" data-id="{{index}}" wx:key="{{index}}" style="height:{{(height/5)-1}}px;width:100%;text-align:center;line-height:{{(height/5)-1}}px; border-bottom:1px solid #ccc">{{item}}</view> -->
+      <view class="Members" wx:for="{{content}}" wx:for-index="indexkey" wx:key="{{indexkey}}" data-id="{{indexkey}}" style="width:100%;">
+        <!-- 一级 -->
+        <view class="Members_one" data-tid="{{item.uid}}" data-id="{{indexkey}}" bindtap='spotOne'>
+          <image class="image" src='{{item.face}}'></image>
+          <view class="letter">
+            <view class="name">{{item.nickname}}</view>
+            <view class="customer">
+              下级分销 {{item.childNum}}    客户 {{item.customerNum}}
+            </view>
+          </view>
+          <view class="iocn">
+            <image wx:if="{{isTow && key==indexkey}}" src='../../../asset/img/level_icon1.png'></image>
+            <image src='../../../asset/img/level_icon2.png' wx:else></image>
+          </view>
+        </view>
+        <view wx:if="{{isTow && key==indexkey}}" wx:for="{{twoContent}}" wx:for-item="two" wx:key="{{index}}">
+          <!-- 二级 -->
+          <view data-id="{{indexkey}}" class="Members_two" data-tid="{{two.uid}}" bindtap='spotTow'>
+            <image class="image" src='{{two.face}}'></image>
+            <view class="letter">
+              <view class="name">{{two.nickname}}</view>
+              <view class="customer">
+                下级分销 {{two.childNum}}    客户 {{two.customerNum}}
+              </view>
+            </view>
+            <view class="iocn">
+              <image wx:if="{{isThree && Towkey==indexkey && Towid==two.uid}}" src='../../../asset/img/level_icon1.png'></image>
+              <image src='../../../asset/img/level_icon2.png' wx:else></image>
+            </view>
+          </view>
+
+          <!-- <view wx:if="{{isThree && Towkey==indexkey && Towid==two.uid}}" data-tid="{{two.uid}}">
+            <view data-id="{{indexkey}}" class="Members_three" wx:for="{{threeContent}}" wx:for-item="three" wx:key="{{index}}">
+              <image class="image" src='{{three.face}}'></image>
+              <view class="letter">
+                <view class="name">{{three.nickname}}</view>
+                <view class="customer">
+                  下级分销 {{three.childNum}}    客户 {{three.customerNum}}
+                </view>
+              </view>
+            </view>
+          </view> -->
+
+        </view>
+
+
+      </view>
+      <!-- </scroll-view> -->
+
+    </view>
+
+  </view>
+</view>

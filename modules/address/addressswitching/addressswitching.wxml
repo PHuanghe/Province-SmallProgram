@@ -1,0 +1,13 @@
+<view class='address' wx:for="{{commodity}}" wx:key="item.id" bindtap='selectaddress' id='{{item.id}}'>
+  <view class='personal'>
+    <view class='name'>
+      {{item.name}}
+      <text wx:if="{{item.default==1}}">[默认地址]</text>
+    </view>
+    <view class='telephone'>{{item.phone}}</view>
+  </view>
+  <view class='receipt'>{{item.province}}{{item.city}}{{item.county}}{{item.address}}</view>
+</view>
+<navigator style="width:100%" url="../selectTheDefault/selectTheDefault" open-type="navigate">
+<view class='submit'>管理</view>
+</navigator>

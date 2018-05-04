@@ -1,0 +1,8 @@
+<view class='article'>
+  <!-- <web-view src="{{url}}"></web-view> -->
+  <view class='articleli' wx:for="{{commodity}}" wx:key="item">
+    <view wx:if="{{item.text}}">{{item.text}}</view>
+    <image wx:else src='{{item.img}}' mode="widthFix"></image>
+  </view>
+</view>
+

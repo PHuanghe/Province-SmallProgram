@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<swiper indicator-dots="true" class="swiperindex"
+  autoplay="true" interval="3000" duration="500">
+  <block wx:for="{{thumbs}}" wx:key="item.thumb">
+  <navigator url="{{item.url}}" open-type="navigate">
+    <swiper-item>
+      <image src="{{item.thumb}}" class="slide-image" width="100%" height="150"/>
+    </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+<view class="specifications">
+   <view class='shopping' bindtap='shopping' id='{{item.id}}' wx:for="{{commodity}}"  wx:key="item.id">
+   <text>{{item.title}}</text>
+   <image src='{{item.path}}'></image>
+   </view> 
+  <!-- <!-- <view bindtap='showcn'><text>省游灯设备</text></view> -->
+</view>
+<view class='advertisement'>
+  <view class='newest'><image src="../../asset/img/smallicons3.jpg"/>最新</view>
+  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+      <block wx:for="{{msgList}}" wx:key="item.url">
+          <swiper-item>
+            <view class="swiper_item">公告{{windowHeight}}：{{item.title}}</view>
+          </swiper-item>
+      </block>
+  </swiper>
+</view>
+<view class='indlist'>
+   <view class='indlist_li' wx:for="{{dataall}}" wx:key="item.id" id='{{item.id}}' bindtap='article'>
+    <image src="{{item.path}}" class='imagedata'/>
+    <view class='content'>
+      <view class='content_p'>{{item.title}}</view>
+      <view class='content_That'>
+         <text style='flex:1'>{{item.create_time}}</text> 
+        <image src="../../asset/img/smallicons4.jpg"/>
+        <text>{{item.visit}}</text>
+      </view>
+    </view>
+  </view> 
+   
+</view>

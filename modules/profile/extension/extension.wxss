@@ -1,0 +1,19 @@
+/* pages/Myhome/extension/extension.wxss */
+
+.link {
+  height: 16rpx;
+  background-color: whitesmoke;
+}
+
+.extension {
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.extension image {
+  width: 500rpx;
+  height: 500rpx;
+  margin-top: 140rpx;
+  margin-bottom: 40rpx;
+}

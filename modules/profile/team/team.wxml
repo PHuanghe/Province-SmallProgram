@@ -1,0 +1,50 @@
+<!--pages/Myhome/Myteam/Myteam.wxml-->
+
+<view class="page">
+  <view class="Myteam">
+    <view class="Myteam_interval"></view>
+    <view class="Myteam_number">
+      <view class="number none">
+        <view style="color:#f27c27;">{{member_num}}</view>
+        <view>爱心使者</view>
+      </view>
+      <view class="number">
+        <view style="color:#f27c27;">{{dev_num}}</view>
+        <view>公益站点</view>
+      </view>
+      <view class="number">
+        <view>爱心奖励
+          <text style="color:#f27c27;"> ({{info.lever}})</text>
+        </view>
+        <view>还差站点
+          <text style="color:#f74a38;">{{need_num}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="Myteam_interval"></view>
+
+    <view class="Myteam_list">
+      <view class="Members" wx:for="{{content}}" wx:key="{{index}}">
+        <image src='{{item.face}}'></image>
+        <view class="Members_letter">
+          <view class="name">{{item.nickname}}</view>
+          <view class="customer">
+            下级分销 {{item.separate_num}} 客户 {{item.dev_num}}
+          </view>
+        </view>
+
+        <view class="btn">
+          <button class="weui-btn mini-btn" type="default" size="mini" data-id="{{item.id}}" bindtap='agree' wx:if="{{item.status==0}}">同意</button>
+          <button class="weui-btn mini-btn" type="default" size="mini" data-id="{{item.id}}" bindtap='refuse' wx:if="{{item.status==0}}">拒绝</button>
+          <button class="weui-btn mini-btn" type="default" size="mini" data-id="{{item.id}}" bindtap='remove' wx:if="{{item.status==1 & is_captain==1 & item.is_captain!=1}}">移除</button>
+
+        </view>
+      </view>
+
+
+    </view>
+
+    <navigator wx:if="{{is_captain==1}}" url="/modules/profile/Invitation/Invitation?id={{info.id}}" class="Myteam_btn">邀请入队</navigator>
+
+  </view>
+</view>

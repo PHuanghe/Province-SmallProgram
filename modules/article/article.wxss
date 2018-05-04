@@ -1,0 +1,3 @@
+.article{font-size:14px;padding: 13px;}
+.article .articleli{line-height: 25px;}
+.article .articleli image{width:100%;display: block;margin: 5px 0;}

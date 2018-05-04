@@ -1,0 +1,32 @@
+<!--modules/profile/exchange/exchange.wxml-->
+<view wx:if="{{change1}}">
+  <view class="change1">
+    <view>兑换游币（个）</view>
+    <input type="number" min="1" max="{{swimNum}}" value="{{swimNum}}" bindinput='watchSwim' placeholder='请输入兑换游币数量' placeholder-class="placeholder"></input>
+    <view class="box">
+      <view class="box_cn"  wx:if="{{exceed1}}">当前可兑换游币{{allSwim}}个</view>
+      <view class="box_cn red" wx:else>已经超过可兑换游币</view>
+
+      <view class="box_cn whole" bindtap='wholeSwim'>全部兑换</view>
+    </view>
+  </view>
+
+  <button class=" {{swimNum==''?'cur':'cur1'}} default" type='default' bindtap='swim'>确认兑换</button>
+   <view class="Prompt">游币兑换金额比例 为100 ：80</view> 
+</view>
+
+<view wx:if="{{change2}}">
+  <view class="change2">
+    <view>提款金额（元）</view>
+    <input type="number" value="{{moneyNum}}" bindinput='watchMoney' placeholder='请输入提现金额' placeholder-class="placeholder"></input>
+    <view class="box">
+      <view class="box_cn"  wx:if="{{exceed2}}">当前可提现金额为{{allMoney}}元</view>
+      <view class="box_cn red" wx:else>已经超过可提现金额</view>
+
+      <view class="box_cn whole" bindtap='wholeMoney'>全部提现</view>
+    </view>
+  </view>
+
+  <button class=" {{moneyNum==''?'cur':'cur2'}} default" type='default'  bindtap='money'>确认提现</button>
+  <!-- <view class="Prompt">人民币与游币提现比例为1：0.8</view> -->
+</view>

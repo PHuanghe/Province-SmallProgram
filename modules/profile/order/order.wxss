@@ -1,0 +1,151 @@
+/* pages/Myhome/order/order.wxss */
+page{background-color: whitesmoke;}
+
+.weui-navbar__slider {
+  width: 1.5em;
+  margin: 0 28rpx;
+  left: 0 !important;
+  background-color: #f27a38;
+}
+.weui-navbar{border-bottom:none !important;border-top:1px solid #eee;}
+.weui-navbar__item {
+  padding: 0;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #f27a38 !important;
+  position: relative;
+}
+
+.weui-bar__item_on ::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100rpx;
+  height: 6rpx;
+  background: #f27a38;
+  bottom: 0;
+  right: 50%;
+  margin-right: -50rpx;
+}
+
+.weui-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 88rpx;
+  height: 88rpx;
+  color: #666;
+  background-color: white;
+}
+
+.weui-navbar__title {
+  font-size: 26rpx;
+}
+
+.weui-tab__panel {
+  padding-top: 90rpx;
+}
+.data{background-color: #fff;}
+.data_link {
+  height: 16rpx;
+  background-color: whitesmoke;
+}
+
+.Tobepaid-top {
+  margin: 0 26rpx;
+  line-height: 64rpx;
+  font-size: 22rpx;
+  color: #d5d5d5;
+}
+
+.pendingpayment {
+  line-height: 66rpx;
+  font-size: 24rpx;
+  color: #b3b3b3;
+  float: right;
+  display: block;
+}
+
+.Clearfloat {
+  clear: both;
+}
+
+.commodity {
+  PADDING: 0 26rpx;
+  display: flex;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.commodity_img {
+  width: 120rpx;
+  height: 150rpx;
+  padding: 10rpx 26rpx 10rpx 0;
+  flex: 1;
+}
+
+.commodity_content {
+  flex: 3;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.title {
+  padding-top: 20rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.price {
+  padding-bottom: 20rpx;
+  width: 68%;
+  position: absolute;
+  text-align: bottom;
+  bottom: 0;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price label {
+  color: #999;
+}
+
+.price em {
+  color: #f27a38;
+  padding-right: 20rpx;
+  font-size: 28rpx;
+}
+
+.condition {
+  padding: 20rpx 26rpx;
+  display: flex;
+}
+
+.Tobepaidbottom {
+  flex: 3;
+  line-height: 60rpx;
+  text-align: right;
+}
+
+.Tobepaidbottom navigator{
+  display: inline-block;
+  margin-left: 20rpx;
+  width: 150rpx;
+  text-align: center;
+  color: #666;
+  border: 1px solid #e5e5e5;
+  font-size: 26rpx;
+  border-radius: 4px;
+}
+
+.payment {
+  border: 1px solid #f27a38 !important;
+  color: #f27a38 !important;
+}

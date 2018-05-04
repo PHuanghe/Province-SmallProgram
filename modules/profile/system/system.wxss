@@ -1,0 +1,17 @@
+/* pages/Myhome/system/system.wxss */
+
+
+.system {
+  margin-top: 40%;
+  text-align: center;
+}
+
+.system image {
+  width: 305rpx;
+  height: 171rpx;
+}
+.system_title{
+  font-size: 28rpx;
+  margin-top: 100rpx;
+  color: #333;
+}

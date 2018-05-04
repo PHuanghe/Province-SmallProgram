@@ -1,0 +1,83 @@
+page{background-color:whitesmoke;}
+.cellbox{background-color: #fff;}
+.edit{
+    font-size: 13px;
+    color: #333;
+    line-height: 44px;
+    height: 44px;
+    padding: 0 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex; }
+.cellbox .edit input{margin-top:9px;margin-left: 20px;flex:1;}
+.detailt{background-color: #fff;margin-top: 8px}
+.detailt .edit image{width: 10px;height: 12px;margin-top: 17px}
+.weui-textarea{padding: 13px 0;margin: 0 13px;font-size: 13px}
+.default{
+    border-radius: 5px;
+    font-size: 12px;
+    color: #999;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    margin: 8px 12px;}
+.submit{line-height: 44px;background-color: #f27c27;color:#fff;font-size: 15px;position: fixed;bottom: 0;left: 0;width: 100%;text-align: center}
+.input {
+  padding-top: 300rpx;
+  width: 100%;
+}
+
+.input input {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx 50rpx;
+}
+
+.section {
+  padding-top: 20rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.citypicker{
+background-color:#fff;
+position:fixed;
+bottom:0;
+left:0;
+z-index:3;
+width:100%;
+border-top:1px solid #eee;
+}
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 4;
+}
+
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2FB42E
+}
+.cur{color:#f27c27;}

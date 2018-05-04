@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "modules/index/index",
+    "modules/order/order",
+    "modules/shoppingMall/shoppingMall",
+    "modules/productDetails/productDetails",
+    "modules/information/information",
+    "modules/article/article",
+    "modules/reviewList/reviewList",
+    "modules/citySwitching/citySwitching",
+    "modules/address/addressswitching/addressswitching",
+    "modules/address/selectTheDefault/selectTheDefault",
+    "modules/address/addTheAddress/addTheAddress",
+    "modules/comment/comment",
+    "modules/profile/index/index",
+    "modules/profile/subordinate/subordinate",
+    "modules/profile/system/system",
+    "modules/profile/customer/customer",
+    "modules/profile/order/order",
+    "modules/profile/whatsystem/whatsystem",
+    "modules/profile/distribution/distribution",
+    "modules/profile/apply/apply",
+    "modules/profile/wallet/wallet",
+    "modules/profile/details/details",
+    "modules/profile/extension/extension",
+    "modules/profile/Invitation/Invitation",
+    "modules/profile/exchange/exchange",
+    "modules/profile/team/team"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中福益游",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#999",
+    "selectedColor": "#f00",
+    "backgroundColor": "#fff",
+    "list": [{
+        "pagePath": "modules/index/index",
+        "iconPath": "asset/img/2_04.png",
+        "selectedIconPath": "asset/img/1_03.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "modules/shoppingMall/shoppingMall",
+        "iconPath": "asset/img/2_01.png",
+        "selectedIconPath": "asset/img/1_01.png",
+        "text": "公益项目"
+      },
+      {
+        "pagePath": "modules/information/information",
+        "iconPath": "asset/img/2_03.png",
+        "selectedIconPath": "asset/img/1_02.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "modules/profile/index/index",
+        "iconPath": "asset/img/2_02.png",
+        "selectedIconPath": "asset/img/1_09.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

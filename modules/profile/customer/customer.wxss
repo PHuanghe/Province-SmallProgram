@@ -1,0 +1,44 @@
+/* pages/Myhome/Mycustomer/Mycustomer.wxss */
+
+.customer_number {
+  line-height: 88rpx;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+
+.customer_link {
+  height: 16rpx;
+  background-color: whitesmoke;
+}
+
+/* 列表 */
+
+.customer_list {
+  padding: 0 25rpx;
+}
+
+.data {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15rpx 0;
+}
+
+.data image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+
+.name {
+  flex: 1;
+  font-size: 30rpx;
+  color: #333;
+  margin: auto;
+  padding-left: 35rpx;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #999;
+  margin: auto;
+}

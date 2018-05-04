@@ -1,0 +1,42 @@
+/* pages/profile/Invitation/Invitation.wxss */
+
+.link {
+  height: 16rpx;
+  background-color: whitesmoke;
+}
+
+.ation {
+  margin: 14%;
+  padding: 25rpx 25rpx 0 25rpx;
+  width: 500rpx;
+  background-color: #34a123;
+}
+
+.ation .ation_img {
+  height: 500rpx;
+  width: 500rpx;
+  background-color: white;
+}
+
+.box_img {
+  width: 43rpx;
+  height: 36rpx;
+  vertical-align: middle;
+}
+
+.box span {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 50rpx;
+  height: 50rpx;
+  color: #333;
+  font-size: 28rpx;
+  background-color: white;
+  border-radius: 4rpx;
+  padding: 0 60rpx;
+  margin-bottom: 15rpx;
+}
+
+.ation view {
+  text-align: center;
+}

@@ -1,0 +1,118 @@
+<swiper indicator-dots="true" class="swiperindex"
+  autoplay="true" interval="3000" duration="500">
+   <block wx:for="{{commodity.path}}" wx:key="key"> 
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="100%" height="150"/>
+    </swiper-item>
+   </block> 
+</swiper>
+<view class='unitPrice'>
+  <view class='introduce'>{{commodity.subtitle}}</view>
+  <!-- <view class='unitPricetext'>售价0元，押金9000，维护费4800</view> -->
+  <view class='unitPricetext'>{{commodity.introduce}}</view>
+  <view class='unitPriceprice'>
+    <view class='Total'>
+      ￥
+      <text>{{commodity.price}}</text>
+    </view>
+    <!-- <view class="{{(index%2==0)?'goods':'install'}}" wx:key="item.title"  wx:for="{{commodity.attr}}" wx:for-item="itemName"><text>
+    {{itemName.title}}</text></view> -->
+    <!-- <view class='install'><text>上门安装</text></view> -->
+  </view>
+</view>
+<view class='specifications'>
+  <view class='specificationsli' bindtap='showspeci'>
+    <text class='choose'>已选</text>
+    <text class='choosecon'>{{selectiontype.title}}</text>
+     <image src="../../asset/img/Arrow.png" class="choose-image"/> 
+  </view>
+  <view class='specificationsli' bindtap='region'>
+    <text class='choose'>送至</text>
+    <text class='choosecon'>广西南宁西乡塘</text>
+    <image src="../../asset/img/Arrow.png" class="choose-image"/> 
+  </view>
+</view>
+<navigator url="../reviewList/reviewList" open-type="navigate">
+    <view class='comment'>
+        <text class='commenttext'>评论<text>({{commodity.commentNum}})</text></text>
+        <image src="../../asset/img/Arrow.png" class="choose-image"/> 
+    </view>
+</navigator>
+<view class='setout' style="background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523185888828&di=5ab5dcbe5ad71979dba7c2d2db743b9f&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F77094b36acaf2eddd39d7b888d1001e939019366.jpg');background-size:536px 300px;">
+  <text>省游灯销售终端如何让您快速赚到三十万？</text>
+    <image src="../../asset/img/go.png"/>  
+</view>
+<view class="swiper-tab">  
+    <view class='swiper-taball'>
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}"data-current="0" bindtap="swichNav">项目介绍</view>  
+    </view>
+    <view  class='swiper-taball'>
+       <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">合作须知</view>  
+    </view>
+</view>  
+<view class="swiper-box" bindchange="bindChange">  
+      <view class='swiper-box-lits' wx:if="{{currentTab==0}}">
+        <view class='intrg' wx:for="{{details}}" wx:key="{{key}}">
+          <view wx:if="{{item.text}}">{{item.text}}</view>
+          <image wx:else src='{{item.img}}' mode="widthFix"></image>
+        </view>
+      </view>  
+      <view  class='swiper-box-lits' wx:if="{{currentTab==1}}">
+          <view style="padding:0 13px;">
+            <text>{{textall}}</text>
+          </view>
+      </view>  
+</view>
+<view class='bottomall'>
+    <view class='clickioc'>
+      <view bindtap='calling' class='clickioclist'><image src="../../asset/img/3_02.png"></image></view>
+      <button open-type="share" class='clickioclist'><image src="../../asset/img/3_04.png"></image></button>
+      <!-- <view><image src="../../asset/img/3_01.png"></image></view> -->
+    </view>
+    <view class='purchase' bindtap='purchase' id='{{commodity.id}}'>立即预约</view>
+</view>
+<!-- 规格切换弹框 -->
+<view class='rbframe' wx:if="{{showspecif}}"> 
+  <view class='rbframe-address'>
+    <view class='choiceprice'>
+      <image src="{{selectiontype.path}}" class="choiceprice-image"/> 
+      <view class='choicespec'>
+        <text class='choicespectop'><text>￥</text>{{selectiontype.model_price}}</text>
+        <text class='choicespeccon'>商品编号：{{selectiontype.id}}</text>
+        <text class='choicespecbottom'>已选择：{{selectiontype.title}}</text>
+      </view>
+      <view class='outline'>
+        <image bindtap='close' src="../../asset/img/qx_1.png"/>   
+      </view>
+    </view>
+    <view class='choicetype'>
+      <view class='choicetypep'>产品类型</view>
+      <view class='choicelist'>
+        <text wx:key="item.title" class="{{typenum==index?'type_cur':''}}" id="{{index}}"  wx:for="{{commodity.attr}}" wx:for-item="itemName" data-hi="{{itemName}}" bindtap="selectiontype">{{itemName.title}}</text>
+      </view>
+    </view>
+    <view class='choicenumber'>
+      <view class='choicnum'>数量</view>
+        <view class='stepper'>
+          <text class='{{minusStatus}}' type='number'  bindtap='bindMinus'>-</text>
+           <input bindinput='telephone' placeholder='' value='{{num}}'/>
+          <text bindtap='bindPlus'>+</text>
+        </view>
+    </view>
+    <view class='newaddress' bindtap='purchase' id='{{commodity.id}}'>立即预约</view>
+  </view>
+</view>
+<!-- 地区选择弹框 -->
+<view class='rbframe' wx:if="{{region}}"> 
+  <view class='rbframe-address'>
+    <view class='addresstitle' bindtap='toprtd'>选择收货地址</view>
+    <view class='addressli'>
+      <view class="addressborder {{numstp?'cur':''}}" bindtap='stylecss'>
+          <image src="../../asset/img/3_03.png" class="chooseioc-image"/> 
+          <text>广西南宁市西乡塘</text>
+          <image src="../../asset/img/back1.png" class="choose-image"/> 
+      </view>
+    </view>
+    <view class='newaddress'>设置新地址</view>
+  </view>
+</view>

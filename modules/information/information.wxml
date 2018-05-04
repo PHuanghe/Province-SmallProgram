@@ -1,0 +1,32 @@
+ <block wx:if="{{showdata}}">
+  <view style="text-align: center;margin-top: 195px;color:#999;font-size:20px;">
+    拼命加载中.....
+  </view>
+</block> 
+<block wx:else>
+  <scroll-view style='height:{{windowHeight}}px;' scroll-y="{{true}}" bindscrolltolower="lower" scroll-top="1">
+    <view class='indlist'>
+       <view class='indlist_li' wx:for="{{dataall}}" wx:key="item.id" bindtap='article' id="{{item.id}}">
+          <image src="{{item.path}}" class='imagedata'/>
+          <view class='content'>
+            <view class='content_p'>{{item.title}}</view>
+            <view class='content_That'>
+              <text style='flex:1'>{{item.create_time}}</text> 
+              <image src="../../asset/img/smallicons4.jpg"/>
+              <text>{{item.visit}}</text>
+            </view>
+          </view>
+        </view> 
+    </view>
+    <block wx:if="{{showbotton}}">
+      <view class='load'>
+        拼命加载中.....
+      </view>
+    </block>
+    <block wx:else>
+      <view class='load'>
+        抱歉没有更多数据了
+      </view>
+    </block>
+  </scroll-view>
+</block>

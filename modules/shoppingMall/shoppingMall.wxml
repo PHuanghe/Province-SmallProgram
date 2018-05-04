@@ -1,0 +1,9 @@
+<view class="uploadWrap">
+  <swiper class="uploadWrapli" scroll-x="false" style="width:100%;height:{{windowHeight}}px;">
+       <swiper-item class="upload_Item" style="width:83%;" bindtap='shopping' id='{{item.id}}' wx:for="{{carousel}}" wx:key="item.id">
+        <view style="width:100%;height:{{windowHeight - 20}}px;padding-top: 10px"> 
+          <image class="upload_Item_img" src="{{item.path}}"></image>
+        </view> 
+      </swiper-item> 
+  </swiper>
+</view>

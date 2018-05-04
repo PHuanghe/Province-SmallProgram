@@ -1,0 +1,5 @@
+page{background-color:whitesmoke;overflow-y:hidden;}
+.uploadWrap{display: flex; display: -webkit-box; flex-direction: column;pxpadding-right:10px;}
+.upload_Item{width: 77.9%!important;height:100%; flex:1;border-radius: 5px;border-left:8px solid whitesmoke;}
+.upload_Item:last-child{margin-right: 20px}
+.upload_Item_img{ width: 100%;height:100%;border-radius: 5px;}

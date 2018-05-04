@@ -1,0 +1,60 @@
+<!--order.wxml-->
+<view class="order">
+  <view class='consignee'>
+    <view class='consigneeion'>
+    <image src='../../asset/img/details_iocn01.png'></image>
+    </view>
+     <navigator style="width:100%" url="../address/addressswitching/addressswitching" open-type="navigate">
+      <view class='news'>
+          <view class='newstop'>
+            <text class='newstoptop' style='letter-spacing:4.4px;'>收货人:</text>
+            <text class='newstopcon'>{{addressdetails.name}}</text>
+            <text class='newstopleft'>{{addressdetails.phone}}</text>
+          </view>
+        <view class='newstop'>
+          <text class='newstoptop'>收货地址:</text>
+          <text class='newstopcon'>{{addressdetails.province}}{{addressdetails.city}}{{addressdetails.county}}{{addressdetails.address}}</text>
+        </view>
+      </view>
+    </navigator>
+    <view class='orderight'>
+      <image src='../../asset/img/Arrow.png'></image>
+    </view>
+  </view>
+  <view class='product'>
+    <view class='producttitle'>订单详情</view>
+    <view class='productdata'>
+      <view class='details'>
+        <image src='{{commoditydistinguish.path}}'></image>
+        <view class='detailstext'>
+          <view class='detailstext_p'>{{commodity.subtitle}}</view>
+          <view class='price'>
+            <text class='pricesnpm'>{{commoditydistinguish.title}}</text>
+            <text>￥{{commoditydistinguish.model_price}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='choicenumber'>
+        <view class='choicnum'>数量</view>
+          <view class='stepper'>
+            <text class='{{minusStatus}}' type='number'  bindtap='bindMinus'>-</text>
+            <input bindinput='telephone' placeholder='' value='{{num}}'/>
+            <text bindtap='bindPlus'>+</text>
+          </view>
+        </view>
+      </view>
+      <view class='postage'>
+        <text style='flex:1'>运费</text>
+        <text>到付</text>
+      </view>
+      <view class='postage'>
+        <text style='flex:1'>支付方式</text>
+        <text>线下支付</text>
+      </view>
+    </view>
+    <view class='payment'>
+      <view class='paymentprice'>合计: <text>￥{{pricenum}}</text></view>
+      <view class='Pay' wx:if="{{commodity.number > 0}}" bindtap='placeorderl'>立即预定</view>
+      <view class='Pay' wx:else style='background-color:#999'>立即预定</view>
+    </view>
+</view>

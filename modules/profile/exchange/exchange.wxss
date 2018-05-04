@@ -1,0 +1,82 @@
+/* modules/profile/exchange/exchange.wxss */
+
+page {
+  background-color: whitesmoke;
+}
+
+.change1, .change2 {
+  background-color: white;
+  color: #999;
+  font-size: 26rpx;
+  margin: 16rpx 0;
+  padding: 25rpx;
+}
+
+input {
+  color: #333;
+  font-size: 46rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.placeholder {
+  color: #ededed;
+}
+
+.box {
+  display: flex;
+}
+
+.box_cn {
+  flex: 3;
+}
+
+.red {
+  color: #f34b4a;
+}
+
+.yes {
+  background-color: #158eff;
+}
+
+.whole {
+  flex: 1;
+  color: #158eff;
+  text-align: right;
+}
+
+button[type=default] {
+  background-color: #b0b0b0;
+}
+
+.cur {
+  pointer-events: none;
+  cursor: default;
+}
+
+.cur1 {
+  background-color: #158eff !important;
+}
+
+.cur2 {
+  background-color: #ffc300 !important;
+}
+
+.default {
+  font-size: 30rpx;
+  color: #fff !important;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 0 25rpx;
+}
+
+.default::after {
+  border: none !important;
+}
+
+.Prompt {
+  text-align: center;
+  font-size: 26rpx;
+  color: #999;
+  padding: 10rpx 0;
+}

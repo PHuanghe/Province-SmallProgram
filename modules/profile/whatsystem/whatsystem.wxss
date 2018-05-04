@@ -1,0 +1,25 @@
+/* pages/Myhome/whatsystem/whatsystem.wxss */
+
+.what_data {
+  padding: 50rpx 34rpx;
+  font-size: 26rpx;
+  color:#333;
+
+}
+
+.data_image {
+  width: 100%;
+  height: 400rpx;
+  margin: 50rpx 0;
+}
+
+.data_image image {
+  width: 100%;
+  height: 100%;
+}
+
+.data_content {
+  line-height: 60rpx;
+}
+
+

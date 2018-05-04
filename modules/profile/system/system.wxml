@@ -1,0 +1,9 @@
+<!--pages/Myhome/system/system.wxml-->
+
+<view class="page">
+  <view class="system">
+
+    <image src='../../../asset/img/system_c1.png'></image>
+    <view class="system_title">v1.0.0</view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="page">
+  <view class="link"></view>
+  <view class="ation">
+    <image class="ation_img" src='{{url}}' data-img='{{url}}' bindtap="previewImage"></image>
+    <view class="box">
+      <span><image class="box_img" src='../../../asset/img/Invitation_icon1.png'></image> 微信扫一扫加入团队</span>
+    </view>
+  </view>
+</view>

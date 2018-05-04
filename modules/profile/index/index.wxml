@@ -1,0 +1,160 @@
+<!--modules/profile/index/index.wxml-->
+
+<view class="index {{promptShow?'noscroll':''}}">
+
+  <view class="index_top">
+    <view class="top_content">
+      <view class="image">
+        <image class="{{border?'border':''}} {{ content.level==0?'zero':''}}{{ content.level==1?'one':''}} {{ content.level==2?'two':''}}{{ content.level==3?'three':''}}" src='{{content.path}}'></image>
+      </view>
+
+      <view class="top_Middle">
+        <view class="name">{{content.nick_name}}</view>
+        <view class="key" wx:if="{{content.level==3}}">稳赚队</view>
+        <!-- <view class="key">稳赚队</view> -->
+      </view>
+      <view class="top_Label">
+        <!-- 金牌 -->
+        <image wx:if="{{content.level==3}}" src='../../../asset/img/index_gold.png'></image>
+        <!-- 银牌 -->
+        <image wx:if="{{content.level==2}}" src='../../../asset/img/index_silver.png'></image>
+        <!-- 铜牌 -->
+        <image wx:if="{{content.level==1}}" src='../../../asset/img/index_cooper.png'></image>
+        <!-- 非分销商 -->
+        <image wx:if="{{content.level==0 | content.level==null}}" src='../../../asset/img/index_pin.png'></image>
+
+      </view>
+    </view>
+
+    <view class="content_number">
+      <view class="number">
+        <view class="num">{{levelNum}}</view>
+        <view>公益事业</view>
+      </view>
+      <view class="number">
+        <text class='num_link'></text>
+        <view class="num">{{guestNum}}</view>
+        <view>预备使者</view>
+        <text class='num_link'></text>
+      </view>
+      <view class="number none">
+        <view class="num">{{incomeNum}}</view>
+        <view>最高收入</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="index_order">
+    <navigator class="weui-panel__ft order_line" url="/modules/profile/order/order?id=-1">
+      <view class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">我的订单</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">查看更多订单</view>
+      </view>
+    </navigator>
+
+    <view class="order_block">
+
+      <navigator class="block" url="/modules/profile/order/order?id=0">
+        <view class="block_news" wx:if="{{zeroNum!=0}}">{{zeroNum}}</view>
+        <image src='../../../asset/img/index_01.png'></image>
+        <view>待确认</view>
+      </navigator>
+      <navigator class="block" url="/modules/profile/order/order?id=1">
+        <view class="block_news" wx:if="{{oneNum!=0}}">{{oneNum}}</view>
+        <image src='../../../asset/img/index_02.png'></image>
+        <view> 待付款</view>
+      </navigator>
+      <navigator class="block" url="/modules/profile/order/order?id=2">
+        <view class="block_news" wx:if="{{twoNum!=0}}">{{twoNum}}</view>
+        <image src='../../../asset/img/index_03.png'></image>
+        <view> 待收货</view>
+      </navigator>
+      <navigator class="block" url="/modules/profile/order/order?id=3">
+        <view class="block_news" wx:if="{{threeNum!=0}}">{{threeNum}}</view>
+        <image src='../../../asset/img/index_04.png'></image>
+        <view> 待安装</view>
+      </navigator>
+      <navigator class="block" url="/modules/profile/order/order?id=4">
+        <view class="block_news" wx:if="{{fourNum!=0}}">{{fourNum}}</view>
+        <image src='../../../asset/img/index_05.png'></image>
+        <view> 待评价</view>
+      </navigator>
+
+    </view>
+  </view>
+  <!-- 中间 -->
+  <view class="content_Middle">
+    <navigator class="Middle none" url="/modules/profile/customer/customer">
+      <image src='../../../asset/img/index_co1.png'></image>
+      <view>预备使者</view>
+    </navigator>
+    <navigator class="Middle" data-id="{{content.separateSales}}" bindtap='Prompt'>
+      <image src='../../../asset/img/index_co2.png'></image>
+      <view>公益事业</view>
+    </navigator>
+    <navigator class="Middle" data-tid="{{content.separateSales}}" bindtap='Prompt'>
+      <image src='../../../asset/img/index_co3.png'></image>
+      <view>爱心推荐</view>
+    </navigator>
+    <navigator class="Middle" url='/modules/profile/wallet/wallet'>
+      <image src='../../../asset/img/index_co4.png'></image>
+      <view>爱心钱包</view>
+    </navigator>
+  </view>
+
+  <!-- 底部 -->
+  <view class="content_footer">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg footer">
+          <navigator data-tid="{{content.isTeam}}" bindtap='team' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>爱心团队</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator data-tid="{{content.isTeam}}" bindtap='team_son' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>使者推荐</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+
+          <navigator url="/modules/profile/apply/apply" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>公益发展</view>
+            </view>
+            <text class="weui-cell__ft weui-cell__ft_in-access">深入公益\t为爱而"站"</text>
+          </navigator>
+
+          <navigator url="/modules/profile/distribution/distribution" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>爱心说明</view>
+            </view>
+            <text class="weui-cell__ft weui-cell__ft_in-access">爱心值千万\t创造入千万</text>
+          </navigator>
+
+          <navigator url="/modules/profile/system/system" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>系统信息</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 关注提示 -->
+
+<view class='prompt_box' wx:if="{{promptShow}}">
+  <view class="prompt">
+    <image class="prompt_close" src="../../../asset/img/Close_01.png" bindtap='close'></image>
+    <image class="prompt_QR" src="{{promptImg}}" data-img="{{promptImg}}" bindtap='enlarge'></image>
+    <view class="title">温馨提示：</view>
+    <view class="prompt_text">信息获取失败，请先关注省游灯，点击推送链接跳转至小程序。</view>
+  </view>
+</view>

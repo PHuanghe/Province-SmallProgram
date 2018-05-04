@@ -1,0 +1,81 @@
+/* pages/Myhome/Myteam/Myteam.wxss */
+
+.Myteam_interval {
+  height: 15rpx;
+  background-color: whitesmoke;
+}
+
+.Myteam_number {
+  font-size: 28rpx;
+  display: flex;
+  text-align: center;
+  padding: 25rpx 0;
+  background-color: white;
+}
+
+.number {
+  flex: 1;
+  border-left: 1px solid #eee;
+  line-height: 50rpx;
+}
+
+.none {
+  border-left: none !important;
+}
+
+/* 列表 */
+
+.Myteam_list {
+  padding: 0 25rpx;
+  background-color: white;
+}
+
+.Members {
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.Members image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+
+.btn {
+  text-align: right;
+  flex: 1;
+  margin: auto;
+}
+
+.btn button[size=mini] {
+  margin: 0 8rpx;
+  font-size: 24rpx;
+}
+
+.Members_letter {
+  padding-left: 10rpx;
+  padding-right: 50rpx;
+  line-height: 50rpx;
+}
+
+.name {
+  font-size: 30rpx;
+}
+
+.customer {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.Myteam_btn {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 28rpx;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #f37c28;
+  color: white;
+}

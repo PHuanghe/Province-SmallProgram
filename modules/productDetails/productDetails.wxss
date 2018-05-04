@@ -1,0 +1,160 @@
+page{background-color:whitesmoke;padding-bottom:47px;}
+.swiperindex {height: 375px;background: #fff;}
+.swiperindex image{height: 100%;width:100%;}
+.unitPrice{padding: 10px 13px;background-color: #fff;}
+.unitPrice .introduce{font-size: 15px;color:#333;margin-bottom:7px;overflow:hidden;
+text-overflow:ellipsis;
+display:-webkit-box;
+-webkit-line-clamp:2;
+-webkit-box-orient:vertical;
+width: 100%;
+line-height: 22px;
+}
+.unitPrice .unitPricetext{font-size: 13px;color:#666;margin-bottom:5px;}
+.unitPrice .unitPriceprice {display: flex;}
+.unitPrice .unitPriceprice .Total{font-size: 13px;color:#f74a38;}
+.unitPrice .unitPriceprice .Total text{font-size: 21px;color:#f74a38;}
+.unitPrice .unitPriceprice .goods{font-size: 10px;color:#f37c28;margin-top:8px;}
+.unitPrice .unitPriceprice .goods text{border:1px solid #f37c28;border-radius: 3px;margin-left:10px;padding:1px 5px;}
+.unitPrice .unitPriceprice .install{font-size: 10px;color:#f74a38;margin-top:8px;}
+.unitPrice .unitPriceprice .install text{border:1px solid #f74a38;border-radius: 3px;margin-left:10px;padding:1px 5px;}
+.specifications{background-color: #fff;margin-top: 8px;}
+.specifications .specificationsli{line-height: 44px;padding: 0 13px;border-bottom: 1px solid #eee;display: flex;}
+.specifications .specificationsli .choose-image{height: 10px;width: 6px;margin-top:18px;}
+.specifications .specificationsli .choose{font-size:15px;color:#333;margin-right: 10px;}
+.specifications .specificationsli .choosecon{font-size:15px;color:#666;flex:1}
+.comment{line-height: 44px;background-color: #fff;padding: 0 13px;font-size: 15px;color:#333;display: flex;margin-top: 8px;}
+.comment .commenttext{flex:1;}
+.comment .commenttext text{color:#f27c27;}
+.comment .choose-image{height: 10px;width: 6px;margin-top:18px;}
+.setout{padding: 0 13px;height: 44px;line-height: 44px;font-size: 15px;color:#f37c28;display: flex;margin-top: 8px;}
+.setout text{flex:1;overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;}
+.setout image{width: 55px;height: 30px;margin-top:9px;}
+/**选项卡**/  
+.swiper-tab{
+  margin-top: 8px;  
+  background-color: #fff;
+    width: 100%;  
+    display: flex;
+    /* border-bottom: 2rpx solid #777777;   */
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-taball{flex:1;}
+.swiper-tab-list{  
+    font-size: 13px;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #333;  
+}  
+.on{border-bottom: 5rpx solid red;}  
+  
+.swiper-box{ display: block; width: 100%; overflow: hidden; }  
+.swiper-box .swiper-box-lits{  
+    background-color: #fff; 
+    padding: 13px 0;
+    font-size: 13px;
+    line-height:25px;
+
+}  
+.swiper-box .swiper-box-lits .intrg{width: 100%;}
+.swiper-box .swiper-box-lits .intrg image{width: 100%;display: block;} 
+.bottomall{height: 44px;position: fixed;z-index: 1;bottom: 0;width: 100%;display: flex;border:1px solid #eee;}
+.bottomall .purchase{line-height: 44px;text-align: center;width: 45%;background-color: #f74a38;color:#fff;}
+.bottomall .clickioc{line-height: 44px;width: 55%;display: flex;background-color: #fff;}
+.bottomall .clickioc .clickioclist{flex:1;text-align: center;border-style:none;background-color:#fff;}
+.bottomall .clickioc .clickioclist image{width: 23px;height: 23px;margin-top:12px;}
+.bottomall button::after{ border: none; }
+/* <!-- 地区选择弹框 --> */
+.rbframe{position: fixed;z-index: 2;height: 100%;width: 100%;top:0;left: 0;background-color:rgba(0,0,0,0.7);}
+.rbframe .rbframe-address{width: 100%;background-color: #fff;position: absolute;bottom: 0;}
+.rbframe .rbframe-address .addresstitle{line-height: 44px;text-align: center;font-size: 15px;color:#333;border-bottom: 1px solid #eee;}
+.rbframe .rbframe-address .addressli{padding: 0 13px;min-height: 300px;}
+.rbframe .rbframe-address .addressli .addressborder{padding: 13px;border: 1px solid #eee;margin-top: 13px;font-size: 15px;color:#999;position:relative}
+.rbframe .rbframe-address .addressli .addressborder .chooseioc-image{width: 10px;height: 14px;vertical-align:middle;margin-right:5px;}
+.rbframe .rbframe-address .addressli .addressborder .choose-image{display: none;}
+.rbframe .rbframe-address .addressli .cur .choose-image{display:block;width: 20px;height: 20px;position:absolute;top:0;right:0;}
+.rbframe .rbframe-address .addressli .cur{border: 1px solid #f27c27!important;}
+.rbframe .rbframe-address .newaddress{line-height: 44px;background-color: #f27c27;width: 100%;text-align: center;color:#fff;}
+.type_cur{background-color: #f27c27!important;color:#fff!important;}
+/* <!-- 规格弹框 --> */
+.choiceprice {
+    position: relative;
+    height: 94px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    margin: 0 13px;
+}
+.choiceprice .choiceprice-image {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: -15px;
+    z-index: 3;
+    background-color: #fff;
+}
+.choiceprice .choicespec {
+  margin-left: 113px;
+    padding-top: 20px;
+    flex: 1;
+    line-height: 21px;
+}
+.choiceprice .choicespec .choicespectop{font-size: 18px;
+    color: #f27c27;
+    display: block;
+    font-weight: 600;}
+.choiceprice .choicespec .choicespecbottom{
+  width: 210px;
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;}
+.choiceprice .choicespec .choicespectop text{font-size: 13px}
+.choiceprice .choicespec>text{display: block;font-size: 14px;}
+.choiceprice .outline {padding-top: 10px;}
+.choiceprice .outline image{width: 24px;height: 24px;}
+.choicetype{margin: 0 13px;border-bottom:1px solid #eee;}
+.choicetype .choicetypep{font-size: 15px;color: #333;line-height: 40px;}
+.choicetype .choicelist text{line-height: 30px;padding: 0 9px;background-color: #f2f2f2;font-size: 13px;display:inline-block;margin-right: 10px;margin-bottom: 10px;}
+.choicenumber{margin: 0 13px;display: flex;border-bottom:1px solid #eee;}
+.choicenumber .choicnum{margin: 20px 0;font-size: 15px;flex:1;}
+.rbframe-address .newaddress{line-height: 44px;background-color: #f27c27;width: 100%;text-align: center;color:#fff;margin-top: 40px;}
+/*主容器*/
+.stepper {
+  width:83px;
+  height:25px;
+  border-radius: 3px;
+  margin-top:20px;
+}
+/*加号和减号*/
+.stepper text {
+  float: left;
+  width: 25px;
+  line-height: 25px;
+  text-align: center;
+  color:#fff;
+  background-color:#f27c27;
+}
+/*数值*/
+.stepper input {
+  width: 32px;
+  height: 25px;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  background-color: #fff;
+}
+/*普通样式*/
+.stepper .normal {
+  color:#fff;
+}
+/*禁用样式*/
+.stepper .disable {
+  background-color: #dcdcdc;
+}
+.payment{line-height: 44px;display: flex;position: fixed;bottom: 0;left:0;width: 100%;}
+.payment .paymentprice{line-height: 44px;flex: 1;background-color: #fff;padding-left: 13px;font-size: 13px;}
+.payment .paymentprice text{font-size: 20px;color:#f27c27;}
+.payment .Pay{line-height: 44px;flex: 1;background-color: #f27c27;color: #fff;text-align: center;}

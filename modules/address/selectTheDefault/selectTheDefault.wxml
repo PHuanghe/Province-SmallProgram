@@ -1,0 +1,30 @@
+<view style="margin-bottom:44px;">
+  <view class='address' wx:for="{{commodity}}" wx:key="item.id">
+    <view class='personal'>
+      <view class='name'>
+        {{item.name}}
+      </view>
+      <view class='telephone'>{{item.phone}}</view>
+    </view>
+    <view class='receipt'>{{item.province}}{{item.city}}{{item.county}}{{item.address}}</view>
+    <view class='default'>
+      <view bindtap='setdefault' id="{{item.id}}" class='default-left'>
+        <view style='color: rgb(235, 97, 0);' wx:if="{{item.default==1}}">
+        <icon style='vertical-align:sub;height:25px;' type="success" color="#f27c27" size="13"/>
+          默认地址
+        </view>
+        <view wx:else>
+        <icon style='vertical-align:sub;height:25px;' type="success" color="#999" size="13"/>
+          设为默认
+        </view>
+      </view>
+      <view class='default-rugit'>
+        <text bindtap="jump" id="{{item.id}}">编辑</text>
+        <text bindtap='deletes' id="{{item.id}}">删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+<navigator style="width:100%" url="../addTheAddress/addTheAddress" open-type="navigate">
+<view class='submit'>添加地址</view>
+</navigator>

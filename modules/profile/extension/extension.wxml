@@ -1,0 +1,10 @@
+<!--pages/Myhome/extension/extension.wxml-->
+
+<view class="page">
+<view class="link"></view>
+  <view class="extension">
+    <image src='{{url}}' data-img='{{url}}' bindtap="previewImage"></image>
+    <view>长按分享二维码</view>
+    <view>分享更多用户哦</view>
+  </view>
+</view>

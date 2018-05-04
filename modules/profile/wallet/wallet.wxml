@@ -1,0 +1,122 @@
+<!--pages/Myhome/Mywallet/Mywallet.wxml-->
+
+<view class="page">
+
+  <view class="Mywallet">
+    <view class="link"></view>
+    <view class="wallet_number">
+      <view class="number none">
+        <image src='../../../asset/img/wallet_icon1.png'></image>
+        <view class="number_price">
+          <view class="price" style='color:#ffc300' wx:if="{{assets.userTm==''}}">0</view>
+          <view class="price" style='color:#ffc300' wx:else>{{assets.userTm}}</view>
+          <view>游币</view>
+        </view>
+
+      </view>
+      <view class="number">
+        <image src='../../../asset/img/wallet_icon2.png'></image>
+        <view class="number_price">
+          <view class="price" style='color:#ffc300' wx:if="{{assets.amount==''}}">0</view>
+          <view class="price" style='color:#f34b4a' wx:else>{{assets.amount}}</view>
+          <view>余额</view>
+        </view>
+      </view>
+
+      <view class="number">
+        <image src='../../../asset/img/wallet_icon3.png'></image>
+        <view class="number_price">
+          <view class="price" style='color:#f27c27'>{{assets.rewardPrice}}</view>
+          <view>奖励金</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="button_btn">
+      <button bindtap="exchange" class="btn_1" type="primary">兑换</button>
+      <button bindtap="carry" class="btn_2" type="primary">提现</button>
+    </view>
+
+    <view class="page__bd">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item" bindtap="tabClick">
+              <!-- {{activeIndex == index ? 'weui-bar__item_on' : ''}} -->
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <!-- 游币记录 -->
+            <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{height}}px;" class="list" bindscrolltolower="tmRecordLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+              <view class="data" wx:for="{{tmRecord}}" wx:key="{{index}}">
+                <view class="time">{{item.type_name}} {{item.create_time}}</view>
+                <view class="">+{{item.price}}</view>
+              </view>
+              <block wx:if="{{showbotton}}">
+                <view class='load'>
+                  抱歉没有更多游币记录了
+                </view>
+              </block>
+            </scroll-view>
+          </view>
+
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <!-- 游币兑换记录 -->
+
+            <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{height}}px;" class="list" bindscrolltolower="commissionLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+              <view class="data" wx:for="{{commission}}" wx:key="{{index}}">
+                <view class="time">{{item.create_time}}</view>
+                <view class="">+{{item.price}}</view>
+              </view>
+              <block wx:if="{{showbotton}}">
+                <view class='load'>
+                  抱歉没有更多兑换记录了
+                </view>
+              </block>
+            </scroll-view>
+
+          </view>
+
+          <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+            <!-- 奖励金记录 -->
+
+            <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{height}}px;" class="list" bindscrolltolower="rewardLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+              <view class="data" wx:for="{{rewardPrice}}" wx:key="{{index}}">
+                <view class="time">{{item.create_time}}</view>
+                <view class="">+{{item.price}}</view>
+              </view>
+              <block wx:if="{{showbotton}}">
+                <view class='load'>
+                  抱歉没有更多奖励金记录了
+                </view>
+              </block>
+            </scroll-view>
+
+          </view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+            <!-- 提现记录 -->
+
+            <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{height}}px;" class="list" bindscrolltolower="withdrawLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+              <view class="data" wx:for="{{withdraw}}" wx:key="{{index}}">
+                <view class="time">{{item.create_time}}</view>
+                <view class="num">-{{item.price}}</view>
+              </view>
+              <block wx:if="{{showbotton}}">
+                <view class='load'>
+                  抱歉没有更多提现记录了
+                </view>
+              </block>
+            </scroll-view>
+
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

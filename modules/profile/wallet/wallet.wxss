@@ -1,0 +1,84 @@
+/* pages/Myhome/Mywallet/Mywallet.wxss */
+
+.wallet_number {
+  display: flex;
+  padding: 40rpx 0;
+  background-color: white;
+  font-size: 26rpx;
+}
+
+.link {
+  height: 16rpx;
+  background-color: whitesmoke;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  border-left: 1px solid #eee;
+}
+
+.number image {
+  width: 98rpx;
+  height: 90rpx;
+  margin-right: 10rpx;
+}
+
+.none {
+  border-left: none !important;
+}
+.number_price{text-align: center;}
+.price {
+  font-size: 30rpx;
+  font-weight: 400;
+}
+
+.button_btn {
+  text-align: center;
+  display: flex;
+  padding: 16rpx 44rpx;
+  color: white;
+  background-color: whitesmoke;
+}
+button::after{border: none !important}
+.btn_1 {
+  padding: 0 110rpx;
+  border-radius: 3px;
+  background-color: #158eff !important;
+}
+
+.btn_2 {
+  padding: 0 110rpx;
+  border-radius: 3px;
+  background-color: #ffc300 !important;
+}
+
+/* 数据 */
+
+.page__bd {
+  background-color: white;
+}
+.weui-navbar{border-bottom:1px solid #f0f0f0;}
+.weui-navbar__slider {
+  width: 3em;
+  margin: 0 35rpx;
+  background-color: #f27c27;
+}
+.data {
+  line-height: 86rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #64be28;
+  padding: 0 26rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.num {
+  color: #f34b4a !important;
+}
+
+.time {
+  color: #666 !important;
+}

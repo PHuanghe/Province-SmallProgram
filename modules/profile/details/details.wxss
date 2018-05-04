@@ -1,0 +1,286 @@
+/* pages/Myhome/details/details.wxss */
+
+page {
+  background-color: whitesmoke;
+}
+
+a {
+  color: #999;
+}
+
+.details_letter {
+  padding: 0 26rpx;
+  font-size: 26rpx;
+  color: #333;
+  background-color: white;
+  margin: 16rpx 0;
+}
+
+.letter_collect, .letter_express {
+  display: flex;
+  align-items: center;
+}
+
+.collect_img {
+  width: 30rpx;
+  height: 35rpx;
+  margin: 0 15rpx;
+}
+
+.express_img {
+  width: 35rpx;
+  height: 30rpx;
+  margin: 0 15rpx;
+}
+
+.letter_collect {
+  border-bottom: 1px solid #eee;
+}
+
+.collect_info, .express_speed {
+  flex: 3;
+  padding: 15rpx 0 15rpx 10rpx;
+}
+
+.speed {
+  display: flex;
+  justify-content: space-between;
+  color: #68c76c;
+}
+
+.name_phone {
+  padding-bottom: 10rpx;
+}
+
+.city {
+  width: 100%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.name_phone label {
+  display: inline-block;
+  width: 50%;
+}
+
+.name_phone text {
+  text-align: right;
+  display: inline-block;
+  width: 50%;
+}
+
+/* 商品 */
+
+.details_commodity {
+  font-size: 28rpx;
+  color: #333;
+  background-color: white;
+  margin-bottom: 16rpx;
+}
+
+.commodity_number {
+  padding: 0 26rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 88rpx;
+}
+
+.commodity {
+  PADDING: 0 26rpx;
+  display: flex;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.commodity_img {
+  width: 120rpx;
+  height: 120rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+}
+
+.commodity_content {
+  flex: 3;
+  font-size: 26rpx;
+  min-height: 150rpx;
+  color: #333;
+}
+
+.title {
+  padding-top: 15rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.price {
+  padding-bottom: 10rpx;
+  width: 73%;
+  position: absolute;
+  text-align: bottom;
+  bottom: 0;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price label {
+  color: #999;
+}
+
+.price em {
+  color: #333;
+  font-size: 26rpx;
+}
+
+.min_height {
+  color: #999;
+  font-size: 26rpx !important;
+  line-height: 40rpx !important;
+  padding-top: 8rpx !important;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26rpx;
+  text-align: right;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.link {
+  line-height: 60rpx !important;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+
+/* 物流 */
+
+.details_logistics {
+  padding: 10rpx 0;
+  font-size: 26rpx;
+  color: #999;
+  background-color: white;
+  margin-bottom: 90rpx;
+}
+
+.logistics_box {
+  color: #999;
+  display: flex;
+}
+
+.logistics_icon {
+  width: 60rpx;
+  position: relative;
+}
+
+.logistics_after {
+  flex: 1;
+  padding-right: 60rpx;
+  border-top: 1px solid #eee;
+}
+
+.none {
+  border-top: none !important;
+}
+
+/* 第一个 */
+
+.icon_link {
+  width: 1px;
+  background-color: #eee;
+  margin: auto;
+  height: 100%;
+}
+
+.logistics_box:first-child .icon_link {
+  margin-top: 100%;
+  height: 80% !important;
+}
+
+.logistics_box:last-child .icon_link {
+  margin-top: 0;
+  height: 50% !important;
+}
+
+.active {
+  color: #333 !important;
+}
+
+.icon_red {
+  border-radius: 100%;
+  width: 20rpx;
+  height: 20rpx;
+  border: 4rpx solid #fce5d6;
+  background-color: #f27c27;
+  position: absolute;
+  top: 60rpx;
+  left: 31%;
+}
+
+.icon_spot {
+  border-radius: 100%;
+  width: 15rpx;
+  height: 15rpx;
+  background-color: #eee;
+  position: absolute;
+  top: 60rpx;
+  left: 40%;
+}
+
+.after_title {
+  padding-top: 25rpx;
+  line-height: 50rpx;
+}
+
+.after_date {
+  line-height: 70rpx;
+}
+
+.details_btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #f27c27;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.btn {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.botn {
+  font-size: 30rpx !important;
+  height: 88rpx;
+  line-height: 88rpx !important;
+  flex: 1;
+  color: #fff;
+  border-radius: 0 !important;
+}
+
+.cancel {
+  background-color: #d2d2d2 !important;
+}
+
+.payment {
+  background-color: #f27c27 !important;
+}
+
+button::after {
+  border: none !important;
+  border-radius: none !important;
+}

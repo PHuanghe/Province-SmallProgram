@@ -1,0 +1,86 @@
+/* pages/Myhome/subordinate/subordinate.wxss */
+
+.subordinate_number {
+  display: flex;
+  text-align: center;
+  font-size: 28rpx;
+  padding: 30rpx 0;
+}
+
+.number {
+  flex: 1;
+  line-height: 50rpx;
+  border-left: 1px solid #eee;
+}
+
+.none {
+  border-left: none !important;
+}
+
+.subordinate_link {
+  height: 16rpx;
+  background-color: whitesmoke;
+}
+
+/* 列表 */
+
+.subordinate_list {
+  padding: 0 25rpx;
+}
+
+.iocn {
+  margin: auto;
+}
+
+.iocn image {
+  width: 22rpx;
+  height: 13rpx;
+}
+
+.name {
+  font-size: 30rpx;
+}
+
+.customer {
+  padding-top: 15rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.letter {
+  flex: 2;
+  padding-left: 10rpx;
+  line-height: 40rpx;
+}
+
+/* 一级代理 */
+
+.Members_one {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+
+/* 二级代理 */
+
+.Members_two {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0 20rpx 100rpx;
+  border-bottom: 1px solid #eee;
+}
+
+/* 三级代理 */
+
+.Members_three {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0 20rpx 200rpx;
+  border-bottom: 1px solid #eee;
+}

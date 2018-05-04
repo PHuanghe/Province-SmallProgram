@@ -1,0 +1,25 @@
+<view class="page">
+  <view class="Mycustomer">
+    <view class="customer_link"></view>
+    <view class="customer_number">用户总数：
+      <text style="color:#f27c27;">{{num}}</text>
+    </view>
+    <view class="customer_link"></view>
+    <view class="customer_list">
+      <!-- 客户 -->
+      <view class="data" wx:for="{{content}}" wx:key="{{item}}">
+        <image src='{{item.face}}'></image>
+        <view class="name">{{item.nickname}}</view>
+        <view class="time">{{item.create_time}}</view>
+      </view>
+      <!-- 分销商 -->
+      <!-- <view class="data" wx:for="{{team}}" wx:key="{{item}}">
+        <image src='{{item.face}}'></image>
+        <view class="name">{{item.nickname}}</view>
+        <view class="time">{{item.create_time}}</view>
+      </view> -->
+    </view>
+
+
+  </view>
+</view>

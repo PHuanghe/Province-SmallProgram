@@ -1,0 +1,26 @@
+<view class='details'>
+  <image src='{{content.thumb}}'></image>
+  <view class='detailstext'>
+    <view class='detailstext_p'>{{content.title}}</view>
+    <view class='price'>
+      <text class='pricesnpm'>一体机1型 x {{content.number}}</text>
+      <text>￥{{content.price}}</text>
+    </view>
+  </view>
+</view>
+<form bindsubmit="formSubmit">
+  <view class='comment'>
+    <textarea name="evaContent" maxlength="500" bindblur="bindText" value="{{evaContent}}" class="weui-textarea" placeholder="亲，有什么建议和使用感觉都可以写下了哦！" bindblur="charChange" />
+    <!-- <view class='addto'>
+      <view class="addtoimage {{index%3==0?'cur':''}}" wx:for="{{datalils}}" wx:key="item">
+        <image src='../../asset/img/icon_01.png' class='cancel' data-key="{{index}}" bindtap='del'></image>
+        <image  src='{{item}}'></image>
+      </view>
+      <view class='addtobutton' bindtap='upload'>
+        <image src='../../asset/img/icon_02.png'></image>
+        添加图片
+      </view>
+    </view> -->
+  </view>
+  <button class='submit' formType="submit">提交评论</button>
+</form>

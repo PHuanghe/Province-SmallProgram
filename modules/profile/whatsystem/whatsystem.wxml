@@ -1,0 +1,19 @@
+<view class="page">
+
+  <view class="what_data">
+
+    <view class="content" wx:for="{{content}}" wx:key="{{index}}">
+      <view class="data_content" wx:if="{{item.text}}">
+      {{item.text}}
+
+      </view>
+      <view class="data_image"  wx:if="{{item.img}}">
+        <image src='{{item.img}}'></image>
+      </view>
+    </view>
+
+  
+
+  </view>
+
+</view>

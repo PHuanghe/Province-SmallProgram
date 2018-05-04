@@ -1,0 +1,22 @@
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{height}}px;" class="list" bindscrolltolower="Load" bindscrolltoupper="topLoad" bindscroll="scroll">
+
+  <view class='reviw' wx:for="{{list}}" wx:key="{{item}}">
+    <view class='reviwtitle'>
+      <image src='{{item.face}}'></image>
+      <text>{{item.nickname}}</text>
+    </view>
+    <view class='reviwdate'>{{item.create_time}}</view>
+    <view class='reviwdate'>{{item.title}} {{item.spec_title}}</view>
+    <view class='reviwcom'>{{item.content}}</view>
+    <view class='reviwimage'>
+      <image wx:for="{{item.picture}}" wx:for-item="img" src='{{img}}'></image>
+      
+    </view>
+  </view>
+
+  <block wx:if="{{showbotton}}">
+    <view class='load'>
+      抱歉没有更多数据了
+    </view>
+  </block>
+</scroll-view>

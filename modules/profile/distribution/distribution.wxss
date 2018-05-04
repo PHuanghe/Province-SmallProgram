@@ -1,0 +1,28 @@
+/* pages/Myhome/distribution/distribution.wxss */
+
+.link {
+  height: 16rpx;
+  background-color: whitesmoke;
+}
+
+.weui-cells:after {
+  border-bottom: none !important;
+}
+
+.tion_footer .weui-cell:before {
+  border-top: none !important;
+}
+
+navigator {
+  font-size: 30rpx !important;
+  color: #333 !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+.title {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}

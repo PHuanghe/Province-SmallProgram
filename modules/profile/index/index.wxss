@@ -1,0 +1,294 @@
+/* pages/Myhome/index/index.wxss */
+
+page {
+  background-color: whitesmoke;
+}
+
+/* 分别为上、中、下 */
+
+.index_top {
+  background: -webkit-linear-gradient(right bottom, #fb5434, #feb55f);
+  background: linear-gradient(right bottom, #fb5434, #feb55f);
+}
+
+.top_content {
+  display: flex;
+  height: 200rpx;
+}
+
+.zero {
+  border: 2px solid #fcd4ad;
+  box-shadow: 0 0 10px #fa8e41;
+}
+
+.one {
+  border: 2px solid #ecddd1;
+  box-shadow: 0 0 10px #fa8e41;
+}
+
+.two {
+  border: 2px solid #ededed;
+  box-shadow: 0 0 10px #fa8e41;
+}
+
+.three {
+  border: 2px solid #f2d49b;
+  box-shadow: 0 0 10px #fa8e41;
+}
+
+.border {
+  border: 1px solid #eee;
+}
+
+.image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.image {
+  width: 120rpx;
+  height: 120rpx;
+  margin: auto;
+  padding: 44rpx 28rpx 44rpx 64rpx;
+  border-radius: 100%;
+}
+
+.top_Middle {
+  color: #fff;
+  flex: 1;
+  margin: auto;
+}
+
+.top_Middle .name {
+  font-size: 32rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.key {
+  font-size: 24rpx;
+}
+
+.top_Label {
+  margin: auto;
+}
+
+.top_Label image {
+  width: 200rpx;
+  height: 136rpx;
+}
+
+.content_number {
+  display: flex;
+  color: white;
+}
+
+.none {
+  border-left: none !important;
+}
+
+.num {
+  font-weight: 800;
+  font-size: 36rpx !important;
+}
+
+.number {
+  flex: 1;
+  text-align: center;
+  font-size: 22rpx;
+  margin: 30rpx 0;
+  /* border-left:1px solid #fff; */
+  position: relative;
+}
+
+.none::after {
+  width: 0 !important;
+}
+
+.number::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 3rpx;
+  height: 50%;
+  background: #fff;
+  opacity: 0.5;
+  bottom: 10%;
+  right: 0;
+}
+
+.num_link {
+  width: 1px;
+  height: 50rpx;
+  background-color: white;
+}
+
+.index_order {
+  background-color: white;
+  margin-top: 10rpx;
+}
+
+.order_line .weui-cell:before {
+  border-top: none !important;
+}
+
+.weui-cell:before {
+  border-top: 1px solid #eee;
+}
+
+.weui-cell__bd {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.weui-cell__ft {
+  font-size: 26rpx;
+}
+
+.order_line {
+  border-bottom: 1px solid #eee;
+}
+
+.order_block {
+  display: flex;
+  font-size: 24rpx;
+  color: #666;
+  padding: 20rpx;
+  text-align: center;
+}
+
+.block image {
+  width: 54rpx;
+  height: 54rpx;
+}
+
+.block {
+  flex: 1;
+  position: relative;
+}
+
+.block_news {
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #f27c27;
+  font-size: 18rpx;
+  color: white;
+  margin: 0 auto;
+  border-radius: 100%;
+  position: absolute;
+  top: -4rpx;
+  right: 35rpx;
+}
+
+/* 中间 */
+
+.content_Middle {
+  background-color: white;
+  margin-top: 10rpx;
+  display: flex;
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+}
+
+.Middle {
+  flex: 1;
+  padding: 40rpx 30rpx;
+  border-left: 1px solid #eee;
+}
+
+.Middle image {
+  width: 64rpx;
+  height: 70rpx;
+}
+
+/* 底部 */
+
+.content_footer {
+  margin-top: 10rpx;
+}
+
+.footer:after {
+  border-bottom: none;
+}
+
+.weui-cell__bd {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.button_area {
+  margin: 0 auto;
+  width: 30%;
+  padding: 20rpx;
+}
+
+.area {
+  color: white;
+  background-color: #f27c27;
+  font-size: 28rpx;
+  border: none;
+}
+
+/* 提示关注公众号 */
+
+.prompt_box {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.prompt {
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  position: relative;
+  width: 74%;
+  height: 65%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.prompt_close {
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  position: absolute;
+  bottom: -100rpx;
+  right: 45%;
+  text-align: center;
+}
+
+.prompt_QR {
+  width: 430rpx;
+  height: 430rpx;
+  padding-top: 10%;
+}
+
+.title {
+  text-align: left !important;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.prompt_text {
+  text-align: left !important;
+  text-indent: 2em;
+  padding: 0 30rpx;
+  color: #333;
+}
+.noscroll {
+     height: 100%;
+     overflow: hidden;
+} 
